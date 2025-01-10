@@ -384,6 +384,7 @@ const Portfolio = () => {
               <CardTitle>About Me</CardTitle>
             </CardHeader>
             <CardContent className="text-sm md:text-base">
+              {/* eslint-disable react/no-unescaped-entities */}
               <p className="text-gray-600 leading-relaxed">
                 I'm an AI Researcher and ML Full Stack Developer with a focus on
                 natural language processing, computer vision, and multimodal AI
@@ -393,6 +394,7 @@ const Portfolio = () => {
                 detection, multimodal summarization, and educational AI
                 applications.
               </p>
+              {/* eslint-disable react/no-unescaped-entities */}
             </CardContent>
           </Card>
 

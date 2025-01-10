@@ -1,21 +1,21 @@
 "use client";
 import React, { useState } from "react";
 import {
-  Activity,
+  //   Activity,
   BookOpen,
   Briefcase,
   Code,
   FileText,
   MessageCircle,
   Mail,
-  Award,
+  //   Award,
   ChevronDown,
-  ExternalLink,
+  //   ExternalLink,
   Terminal,
   GraduationCap,
   Book,
-  Laptop,
-  FlaskConical,
+  //   Laptop,
+  //   FlaskConical,
 } from "lucide-react";
 import {
   Card,

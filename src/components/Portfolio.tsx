@@ -30,7 +30,7 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("about");
   const [expandedCards, setExpandedCards] = useState({});
 
-  const toggleCard = (id) => {
+  const toggleCard = (id: string) => {
     setExpandedCards((prev) => ({
       ...prev,
       [id]: !prev[id],

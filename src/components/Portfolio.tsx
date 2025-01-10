@@ -14,6 +14,7 @@ import {
   Terminal,
   GraduationCap,
   Book,
+  Menu,
   //   Laptop,
   //   FlaskConical,
 } from "lucide-react";
@@ -28,7 +29,10 @@ import { Badge } from "@/components/ui/badge";
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("about");
-  const [expandedCards, setExpandedCards] = useState<{ [key: string]: boolean }>({});
+  const [expandedCards, setExpandedCards] = useState<{
+    [key: string]: boolean;
+  }>({});
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleCard = (id: string) => {
     setExpandedCards((prev) => ({
@@ -289,14 +293,14 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
+      {/* Header - Made responsive */}
+      <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-8 md:py-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">Hrushik Mehta</h1>
-          <h2 className="text-2xl mb-6">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Hrushik Mehta</h1>
+          <h2 className="text-xl md:text-2xl mb-6">
             AI Researcher & ML Full Stack Developer
           </h2>
-          <div className="flex space-x-4">
+          <div className="flex flex-wrap gap-4">
             <a
               href="mailto:hrushikmehta22@gmail.com"
               className="flex items-center space-x-2 hover:text-blue-200"
@@ -322,46 +326,64 @@ const Portfolio = () => {
         </div>
       </header>
 
-      {/* Navigation */}
+      {/* Mobile Navigation */}
       <nav className="sticky top-0 bg-white shadow-md z-50">
         <div className="container mx-auto px-4">
-          <div className="flex space-x-6 py-4">
-            {[
-              { id: "about", icon: FileText, label: "About" },
-              { id: "experience", icon: Briefcase, label: "Experience" },
-              { id: "research", icon: BookOpen, label: "Publications" },
-              { id: "projects", icon: Terminal, label: "Projects" },
-              { id: "skills", icon: Code, label: "Skills" },
-            ].map(({ id, icon: Icon, label }) => (
-              <button
-                key={id}
-                onClick={() => setActiveSection(id)}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
-                  activeSection === id
-                    ? "bg-blue-100 text-blue-800"
-                    : "hover:bg-gray-100"
-                }`}
-              >
-                <Icon size={20} />
-                <span>{label}</span>
-              </button>
-            ))}
+          {/* Mobile Menu Button */}
+          <div className="md:hidden py-4">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="flex items-center space-x-2"
+            >
+              <Menu size={24} />
+              <span>Menu</span>
+            </button>
+          </div>
+
+          {/* Navigation Links */}
+          <div className={`${isMenuOpen ? "block" : "hidden"} md:block`}>
+            <div className="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0 py-4">
+              {[
+                { id: "about", icon: FileText, label: "About" },
+                { id: "experience", icon: Briefcase, label: "Experience" },
+                { id: "research", icon: BookOpen, label: "Publications" },
+                { id: "projects", icon: Terminal, label: "Projects" },
+                { id: "skills", icon: Code, label: "Skills" },
+              ].map(({ id, icon: Icon, label }) => (
+                <button
+                  key={id}
+                  onClick={() => {
+                    setActiveSection(id);
+                    setIsMenuOpen(false);
+                  }}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors w-full md:w-auto ${
+                    activeSection === id
+                      ? "bg-blue-100 text-blue-800"
+                      : "hover:bg-gray-100"
+                  }`}
+                >
+                  <Icon size={20} />
+                  <span>{label}</span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </nav>
 
-      {/* Main Content */}
-      <main className="container mx-auto px-4 py-12">
+      {/* Main Content - Made responsive */}
+      <main className="container mx-auto px-4 py-6 md:py-12">
         {/* About Section */}
         <section
-          className={`space-y-8 ${activeSection === "about" ? "" : "hidden"}`}
+          className={`space-y-4 md:space-y-8 ${
+            activeSection === "about" ? "" : "hidden"
+          }`}
         >
           <Card>
             <CardHeader>
               <CardTitle>About Me</CardTitle>
             </CardHeader>
-            <CardContent>
-              {/* eslint-disable react/no-unescaped-entities */}
+            <CardContent className="text-sm md:text-base">
               <p className="text-gray-600 leading-relaxed">
                 I'm an AI Researcher and ML Full Stack Developer with a focus on
                 natural language processing, computer vision, and multimodal AI
@@ -371,7 +393,6 @@ const Portfolio = () => {
                 detection, multimodal summarization, and educational AI
                 applications.
               </p>
-              {/* eslint-disable react/no-unescaped-entities */}
             </CardContent>
           </Card>
 
@@ -403,20 +424,22 @@ const Portfolio = () => {
 
         {/* Experience Section */}
         <section
-          className={`space-y-6 ${
+          className={`space-y-4 md:space-y-6 ${
             activeSection === "experience" ? "" : "hidden"
           }`}
         >
           {experience.map((job) => (
-            <Card key={job.id}>
+            <Card key={job.id} className="w-full">
               <CardHeader>
-                <CardTitle>{job.title}</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-lg md:text-xl">
+                  {job.title}
+                </CardTitle>
+                <CardDescription className="text-sm">
                   {job.company} | {job.date}
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-4 md:pl-6 space-y-2 text-sm md:text-base">
                   {job.details.map((detail, index) => (
                     <li key={index} className="text-gray-600">
                       {detail}
@@ -430,12 +453,12 @@ const Portfolio = () => {
 
         {/* Research Section */}
         <section
-          className={`space-y-6 ${
+          className={`space-y-4 md:space-y-6 ${
             activeSection === "research" ? "" : "hidden"
           }`}
         >
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 flex items-center">
+          <div className="mb-4 md:mb-8">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 flex items-center">
               <Book className="mr-2" />
               Publications & Research
             </h2>
@@ -447,23 +470,27 @@ const Portfolio = () => {
                 onClick={() => toggleCard(project.id)}
               >
                 <div className="flex justify-between items-center">
-                  <CardTitle>{project.title}</CardTitle>
+                  <CardTitle className="text-lg md:text-xl">
+                    {project.title}
+                  </CardTitle>
                   <ChevronDown
                     className={`transform transition-transform ${
                       expandedCards[project.id] ? "rotate-180" : ""
                     }`}
                   />
                 </div>
-                <CardDescription>
+                <CardDescription className="text-sm">
                   {project.date}
                   {project.conference && (
-                    <span className="ml-2">| {project.conference}</span>
+                    <span className="block md:inline md:ml-2">
+                      | {project.conference}
+                    </span>
                   )}
                 </CardDescription>
               </CardHeader>
               {expandedCards[project.id] && (
                 <CardContent>
-                  <ul className="list-disc pl-6 space-y-2">
+                  <ul className="list-disc pl-4 md:pl-6 space-y-2 text-sm md:text-base">
                     {project.details.map((detail, index) => (
                       <li key={index} className="text-gray-600">
                         {detail}

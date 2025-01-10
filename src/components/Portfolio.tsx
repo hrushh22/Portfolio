@@ -274,7 +274,7 @@ const Portfolio = () => {
     },
   ];
 
-  const renderSkillSection = (title, items) => (
+  const renderSkillSection = (title: string, items: string[]) => (
     <div className="mb-6">
       <h3 className="text-lg font-semibold mb-2">{title}</h3>
       <div className="flex flex-wrap gap-2">

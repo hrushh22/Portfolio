@@ -28,7 +28,7 @@ import { Badge } from "@/components/ui/badge";
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("about");
-  const [expandedCards, setExpandedCards] = useState({});
+  const [expandedCards, setExpandedCards] = useState<{ [key: string]: boolean }>({});
 
   const toggleCard = (id: string) => {
     setExpandedCards((prev) => ({

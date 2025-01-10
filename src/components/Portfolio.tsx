@@ -309,14 +309,14 @@ const Portfolio = () => {
               <span>Email</span>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/hrushik-mehta-668a9221b/"
               className="flex items-center space-x-2 hover:text-blue-200"
             >
               <MessageCircle size={20} />
               <span>LinkedIn</span>
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/hrushh22"
               className="flex items-center space-x-2 hover:text-blue-200"
             >
               <Code size={20} />

@@ -74,7 +74,7 @@ const Portfolio = () => {
       date: "Jan 2024 – July 2025",
       details: [
         "Developed multimodal summarization framework processing 7,130 Reddit discussion threads, improving SOTA performance by 6% on ROUGE and BERTScore metrics.",
-        "Built timeline-based knowledge graph system for meeting summarization, achieving a 19% improvement on ROUGE-1 scores over baseline models, using REBEL-driven knowledge extraction.,
+        "Built timeline-based knowledge graph system for meeting summarization, achieving a 19% improvement on ROUGE-1 scores over baseline models, using REBEL-driven knowledge extraction.",
         "Benchmarked six instruction-tuned LLMs across educational datasets, identifying 21% performance gains through Chain-of-Thought prompting techniques for virtual tutoring applications.",
       ],
     },

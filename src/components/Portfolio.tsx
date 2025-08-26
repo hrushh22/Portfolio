@@ -104,78 +104,77 @@ const Portfolio = () => {
   ];
 
   const research = [
-    {
-      id: "multimodal",
-      title:
-        "From Conversations to Insights: A Multimodal Approach to Discussion Summarization",
-      date: "May 2025 – July 2025",
-      conference:
-        "Accepted at The 19th International Conference on Document Analysis and Recognition (ICDAR 2025).",
-      details: [
-        "Introduced MMRSUM and HMMRSUM datasets (7,130 Reddit threads) and proposed RCMS, a five-stage summarization pipeline that outperformed SOTA models by up to 6% on ROUGE and BERTScore.",
-        "Integrated CLIPScore-based relevance ranking to prioritize user comments, enriching summary quality with context-aware perspectives.",
-      ],
-    },
-    {
-      id: "food_recognition",
-      title:
-        "Evaluation of VLMs for Cross-Modal Culinary Tasks: Food Recognition and Recipe Generation",
-      date: "January 2025 - March 2025",
-      conference:
-        "Accepted at The 16th International IEEE Conference on Computing, Communication and Networking Technologies (ICCCNT 2025).",
-      details: [
-       "Identified a negative correlation (r = −0.79) between recipe complexity and model performance, emphasizing the need for domain-specific fine-tuning in culinary AI.",
-       "Evaluated 5 VLMs using Zero-Shot, One-Shot and Few-Shot methods",
-      ],
-    },
-    
-    {
-      id: "smart_bins",
-      title:
-        "Smart Bins, Smarter Cities: IoT-Driven Waste Collection with Real-Time Sensing and Methane Mapping",
-      date: "June 2024 - August 2024",
-      conference:
-        "Accepted at Mathematical Modelling of Engineering Problems (MMEP) journal, IIETA.",
-      details: [
-        "Developed TrashTech, an IoT-based smart bin system with methane and odor sensing, achieving 20% truck reduction and 12.2 tonnes CO2e annual savings per zone through real-time route optimization.",
-        "Mapped real-time odor and methane levels to generate actionable pickup heatmaps and dynamic driver navigation using React Native mobile interface.",
-      ],
-    },
-    {
-      id: "timeline_insights",
-      title:
-        "Zero-knowledge Enhanced Adaptation Learning (ZEAL): A Framework for Verifiable Model Adaptation",
-      date: "March 2025 - May 2025",
-      conference:
-        "Accepted at the 9th International Conference on Inventive Communication and Computational Technologies (ICICCT 2025).",
-      details: [
-        "Developed ZEAL framework using Zero-knowledge proofs and KZG polynomial commitments for verifiable GPT-2 model adaptation, achieving 46.2% loss reduction with 84.44-second proof generation and 0.303 compression ratio.",
-        "Implemented privacy-preserving verification system producing 124,503 commitments with average polynomial degree 10.0, enabling secure model adaptation without exposing proprietary parameters or training data.",
-      ],
-    },
-    {
-      id: "botland",
-      title: "BotLand: Tailoring LLaMA Language Model for Customised Chat",
-      date: "April 2024 - June 2024",
-      conference:
-        "Published in Third International Conference on Networking, Communication and Computing Technology (NCCT 2024)",
-      details: [
-        "Fine-tuned LLaMA-2 7B with grouped multi-observer attention and KV caching for efficient, domain-adaptive chat; achieved 94.3% validation accuracy and 0.93 F1-score using ICSE-based educational dataset.",
-        "Designed an iterative feedback loop with user profiling, improving response personalization in educational settings.",
-      ],
-    },
-    {
-      id: "education_llm",
-      title:
-        "Exploring the Efficacy of Large Language Models in the Educational Domain: An Empirical Study",
-      date: "January 2024 - March 2024",
-      details: [
-        "Critically evaluated 5 different LLMs on various education tasks such as text generation, Classification, Grammatical error correction, and Automatic Essay Grading utilizing 6 different datasets",
-        "Implemented few-shot learning and chain-of-thought prompting for enhanced performance",
-      ],
-    },
-  ];
-
+  {
+    id: "multimodal",
+    title:
+      "From Conversations to Insights: A Multimodal Approach to Discussion Summarization",
+    date: "May 2025 – July 2025",
+    conference:
+      "Accepted at The 19th International Conference on Document Analysis and Recognition (ICDAR 2025).",
+    details: [
+      "Introduced MMRSUM and HMMRSUM datasets (7,130 Reddit threads) and proposed RCMS, a five-stage summarization pipeline that outperformed SOTA models by up to 6% on ROUGE and BERTScore.",
+      "Integrated CLIPScore-based relevance ranking to prioritize user comments, enriching summary quality with context-aware perspectives.",
+    ],
+  },
+  {
+    id: "food_recognition",
+    title:
+      "Evaluation of VLMs for Cross-Modal Culinary Tasks: Food Recognition and Recipe Generation",
+    date: "January 2025 - March 2025",
+    conference:
+      "Accepted at The 16th International IEEE Conference on Computing, Communication and Networking Technologies (ICCCNT 2025).",
+    details: [
+      "Identified a negative correlation (r = −0.79) between recipe complexity and model performance, emphasizing the need for domain-specific fine-tuning in culinary AI.",
+      "Evaluated 5 VLMs using Zero-Shot, One-Shot and Few-Shot methods",
+    ],
+  },
+  {
+    id: "smart_bins",
+    title:
+      "Smart Bins, Smarter Cities: IoT-Driven Waste Collection with Real-Time Sensing and Methane Mapping",
+    date: "June 2024 - August 2024",
+    conference:
+      "Accepted at Mathematical Modelling of Engineering Problems (MMEP) journal, IIETA.",
+    details: [
+      "Developed TrashTech, an IoT-based smart bin system with methane and odor sensing, achieving 20% truck reduction and 12.2 tonnes CO2e annual savings per zone through real-time route optimization.",
+      "Mapped real-time odor and methane levels to generate actionable pickup heatmaps and dynamic driver navigation using React Native mobile interface.",
+    ],
+  },
+  {
+    id: "timeline_insights",
+    title:
+      "Zero-knowledge Enhanced Adaptation Learning (ZEAL): A Framework for Verifiable Model Adaptation",
+    date: "March 2025 - May 2025",
+    conference:
+      "Accepted at the 9th International Conference on Inventive Communication and Computational Technologies (ICICCT 2025).",
+    details: [
+      "Developed ZEAL framework using Zero-knowledge proofs and KZG polynomial commitments for verifiable GPT-2 model adaptation, achieving 46.2% loss reduction with 84.44-second proof generation and 0.303 compression ratio.",
+      "Implemented privacy-preserving verification system producing 124,503 commitments with average polynomial degree 10.0, enabling secure model adaptation without exposing proprietary parameters or training data.",
+    ],
+  },
+  {
+    id: "botland",
+    title: "BotLand: Tailoring LLaMA Language Model for Customised Chat",
+    date: "April 2024 - June 2024",
+    conference:
+      "Published in Third International Conference on Networking, Communication and Computing Technology (NCCT 2024)",
+    details: [
+      "Fine-tuned LLaMA-2 7B with grouped multi-observer attention and KV caching for efficient, domain-adaptive chat; achieved 94.3% validation accuracy and 0.93 F1-score using ICSE-based educational dataset.",
+      "Designed an iterative feedback loop with user profiling, improving response personalization in educational settings.",
+    ],
+  },
+  {
+    id: "education_llm",
+    title:
+      "Exploring the Efficacy of Large Language Models in the Educational Domain: An Empirical Study",
+    date: "January 2024 - March 2024",
+    details: [
+      "Critically evaluated 5 different LLMs on various education tasks such as text generation, Classification, Grammatical error correction, and Automatic Essay Grading utilizing 6 different datasets",
+      "Implemented few-shot learning and chain-of-thought prompting for enhanced performance",
+    ],
+  },
+];
+  
   const projects = [
     {
       id: "smart-bins-project",

@@ -69,136 +69,99 @@ const Portfolio = () => {
   const experience = [
     {
       id: "iitpatna",
-      title: "Senior AI Researcher",
-      company: "AI-NLP-ML Research Lab IIT Patna",
-      date: "July 2024 - Present",
+      title: "AI Researcher",
+      company: "AI-NLP-ML Research Lab, IIT Patna",
+      date: "Jan 2024 – July 2025",
       details: [
-        "Led development of CultSportQA benchmark with 94% accuracy in cultural bias detection",
-        "Implemented novel fine-tuning pipelines improving cross-cultural understanding by 8.5%",
-        "Pioneered RCMS approach reducing summarization time by 40%",
-        "Enhanced model performance by 18% through innovative few-shot learning",
+        "Developed multimodal summarization framework processing 7,130 Reddit discussion threads, improving SOTA performance by 6% on ROUGE and BERTScore metrics.",
+        "Built timeline-based knowledge graph system for meeting summarization, achieving a 19% improvement on ROUGE-1 scores over baseline models, using REBEL-driven knowledge extraction.,
+        "Benchmarked six instruction-tuned LLMs across educational datasets, identifying 21% performance gains through Chain-of-Thought prompting techniques for virtual tutoring applications.",
       ],
     },
     {
       id: "aiinternship",
       title: "Computer Vision/ML Full Stack Developer",
       company: "Hum1AI",
-      date: "Dec 2024 - Present",
+      date: "Dec 2024 - May 2025",
       details: [
-        "Built Meta human avatar flows and machine learning workflows for LLM projects across AWS, NVIDIA, and GCP platforms",
-        "Fine-tuned models on domain-specific data, integrated function calling, and customized workflows to enhance model performance",
-        "Worked with Hum1AI ML platform to build visualization tools and streamline the MLOps pipeline for large-scale AI projects",
-        "Implemented best MLOps practices, ensuring automation, data privacy, scalability, and system validation for efficient production deployment",
-      ],
-    },
-    {
-      id: "airesearcher",
-      title: "AI Researcher",
-      company: "AI-NLP-ML Research Lab IIT Patna",
-      date: "January 2024 - July 2024",
-      details: [
-        "Developed the MMRSUM dataset with 2000+ annotated threads, leading to a 12% improvement in multimodal summarization accuracy",
-        "Enhanced model performance by 18% using few-shot learning and optimized chain-of-thought prompting techniques",
-        "Contributed to multimodal research by creating novel techniques and frameworks for effective data handling and model training",
-        "Led collaboration with senior researchers to publish findings and integrate improvements into state-of-the-art systems",
+        "Designed MetaHuman avatar generation pipeline on AWS/NVIDIA infrastructure, reducing production deployment time by 40% for production applications.",
+        "Fine-tuned domain-specific LLMs with custom datasets, implemented function-calling and plugin-based visualization tools for data analysis workflows.",
+        "Built end-to-end MLOps pipelines with automated model validation, ensuring reproducibility and 99.5% uptime of model deployments across development environments.",
       ],
     },
 
     {
       id: "appsmagnet",
       title: "Backend Developer & AI Researcher",
-      company: "Apps Magnet Mumbai",
-      date: "July 2023 - December 2023",
+      company: "Apps Magnet",
+      date: "July 2023 - Dec 2023",
       details: [
-        "Reduced data processing time by 65% through optimized API integration",
-        "Improved article summarization accuracy by 25%",
-        "Achieved 92% user satisfaction rate in image generation",
+        "Reduced Facebook/Google Ads data processing pipeline latency by 65% through optimized API integrations and caching strategies for client analytics dashboard.",
+        "Enhanced article summarization system accuracy by 25% using custom NLP pipelines with spaCy and NLTK, processing 10K+ articles daily for content aggregation platform.",
+        "Implemented AI-powered image generation features using DALL-E integration, achieving 92% user satisfaction in A/B testing with 500+ users.",
       ],
     },
   ];
 
   const research = [
     {
-      id: "cultsportqa",
-      title:
-        "CultSportQA: A Benchmark for Addressing Cultural Bias in LLMs and VLMs Through Regional Sports Knowledge",
-      date: "August 2024 - October 2024",
-      conference:
-        "Submitted to 47th European Conference On Information Retrieval (ECIR 2025)",
-      details: [
-        "Created 40,000+ multilingual MCQs on culturally-specific sports for LLM/VLM evaluation",
-        "Fine-tuned state-of-the-art VLMs/LLMs using few-shot and chain-of-thought techniques",
-        "Achieved significant improvements in cultural bias detection and cross-cultural understanding",
-      ],
-    },
-    {
       id: "multimodal",
       title:
-        "Beyond Text: Unlocking Multimodal Magic: Unveiling the Power of Multimodal Discourse Summarization",
-      date: "May 2024 - July 2024",
+        "From Conversations to Insights: A Multimodal Approach to Discussion Summarization",
+      date: "May 2025 – July 2025",
       conference:
-        "Submitted to 31st International Conference on Computational Linguistics (COLING 2025)",
+        "Accepted at The 19th International Conference on Document Analysis and Recognition (ICDAR 2025).",
       details: [
-        "Developed MMRSUM/HMMRSUM datasets for multimodal and code-mixed summarization",
-        "Engineered RCMS approach, outperforming benchmarks by 6%",
-        "Pioneered innovative approaches in multimodal discourse summarization",
+        "Introduced MMRSUM and HMMRSUM datasets (7,130 Reddit threads) and proposed RCMS, a five-stage summarization pipeline that outperformed SOTA models by up to 6% on ROUGE and BERTScore.",
+        "Integrated CLIPScore-based relevance ranking to prioritize user comments, enriching summary quality with context-aware perspectives.",
       ],
     },
     {
       id: "food_recognition",
       title:
-        "Assessing Various Vision-Language Model Performances for Food Recognition and Recipe Generation",
-      date: "June 2024",
+        "Evaluation of VLMs for Cross-Modal Culinary Tasks: Food Recognition and Recipe Generation",
+      date: "January 2025 - March 2025",
       conference:
-        "Submitted to International Research Journal of Multidisciplinary Technovation (IRJMT 2024)",
+        "Accepted at The 16th International IEEE Conference on Computing, Communication and Networking Technologies (ICCCNT 2025).",
       details: [
-        "Evaluated 5 VLMs using zero-shot prompting for food tasks",
-        "Identified domain-specific fine-tuning needs for culinary applications",
+       "Identified a negative correlation (r = −0.79) between recipe complexity and model performance, emphasizing the need for domain-specific fine-tuning in culinary AI.",
+       "Evaluated 5 VLMs using Zero-Shot, One-Shot and Few-Shot methods",
       ],
     },
-    {
-      id: "affective_computing",
-      title:
-        "Affective Computing Through IoT, Sensors, and Other Wearable Devices",
-      date: "May 2024",
-      details: [
-        "Developing real-time emotion detection using IoT wearables and embedded sensors",
-        "Architecting AI models for privacy-preserving, personalized mental health analytics",
-      ],
-    },
+    
     {
       id: "smart_bins",
       title:
         "Smart Bins, Smarter Cities: IoT-Driven Waste Collection with Real-Time Sensing and Methane Mapping",
-      date: "April 2024",
+      date: "June 2024 - August 2024",
       conference:
-        "Submitted to International Research Journal of Multidisciplinary Technovation (IRJMT 2024)",
+        "Accepted at Mathematical Modelling of Engineering Problems (MMEP) journal, IIETA.",
       details: [
-        "Optimized collection routes using IoT sensors, reducing trucks by 20%",
-        "Implemented real-time methane mapping for targeted waste management",
+        "Developed TrashTech, an IoT-based smart bin system with methane and odor sensing, achieving 20% truck reduction and 12.2 tonnes CO2e annual savings per zone through real-time route optimization.",
+        "Mapped real-time odor and methane levels to generate actionable pickup heatmaps and dynamic driver navigation using React Native mobile interface.",
       ],
     },
     {
       id: "timeline_insights",
       title:
-        "Timely Insights: Leveraging LLMs for Timeline Driven Meeting Summarization",
-      date: "March 2024 - May 2024",
+        "Zero-knowledge Enhanced Adaptation Learning (ZEAL): A Framework for Verifiable Model Adaptation",
+      date: "March 2025 - May 2025",
       conference:
-        "Submitted to 31st International Conference on Computational Linguistics (COLING 2025)",
+        "Accepted at the 9th International Conference on Inventive Communication and Computational Technologies (ICICCT 2025).",
       details: [
-        "Implemented novel chunking and knowledge graph integration for TLMS",
-        "Evaluated 7 LLMs on timeline-based summarization tasks",
+        "Developed ZEAL framework using Zero-knowledge proofs and KZG polynomial commitments for verifiable GPT-2 model adaptation, achieving 46.2% loss reduction with 84.44-second proof generation and 0.303 compression ratio.",
+        "Implemented privacy-preserving verification system producing 124,503 commitments with average polynomial degree 10.0, enabling secure model adaptation without exposing proprietary parameters or training data.",
       ],
     },
     {
       id: "botland",
       title: "BotLand: Tailoring LLaMA Language Model for Customised Chat",
-      date: "March 2024",
+      date: "April 2024 - June 2024",
       conference:
         "Published in Third International Conference on Networking, Communication and Computing Technology (NCCT 2024)",
       details: [
-        "Integrated LLM-based generation with advanced information retrieval",
-        "Developed adaptive user interface for iterative refinement",
+        "Fine-tuned LLaMA-2 7B with grouped multi-observer attention and KV caching for efficient, domain-adaptive chat; achieved 94.3% validation accuracy and 0.93 F1-score using ICSE-based educational dataset.",
+        "Designed an iterative feedback loop with user profiling, improving response personalization in educational settings.",
       ],
     },
     {
